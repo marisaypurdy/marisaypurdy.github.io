@@ -150,5 +150,5 @@ h4,
 /* Stack photo above text when there isn't room for them side by side */
 @media (max-width: 1180px) {
   .about { grid-template-columns: minmax(0, 1fr); gap: 28px; justify-content: stretch; }
-  .about-photo { width: 100%; max-width: 480px; height: auto !important; }
+  .about-photo { width: 100% !important; max-width: 480px; height: auto !important; opacity: 1 !important; }
 }
