@@ -13,7 +13,7 @@ function About() {
     const el = textRef.current;
     if (!el) return;
     const sync = () => {
-      const sideBySide = window.matchMedia("(min-width: 721px)").matches;
+      const sideBySide = window.matchMedia("(min-width: 1181px)").matches;
       setPhotoHeight(sideBySide ? el.offsetHeight : null);
     };
     sync();
@@ -32,7 +32,7 @@ function About() {
         src={PHOTO}
         alt="Audrey Deng"
         className="about-photo"
-        style={photoHeight ? { height: photoHeight } : undefined}
+        style={{ height: photoHeight || 0 }}
       />
       <div className="about-text" ref={textRef}>
         <p>I am a Texas-born writer and illustrator based in New York.</p>

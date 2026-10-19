@@ -78,7 +78,7 @@ h4,
 /* About */
 .about {
   display: grid;
-  grid-template-columns: auto minmax(0, 600px);
+  grid-template-columns: auto 600px;
   justify-content: center;
   gap: 56px;
   align-items: start;
@@ -144,7 +144,11 @@ h4,
   body { font-size: 17px; }
   .site-header { padding: 36px 5vw 28px; }
   .site-nav { gap: 20px; }
-  .about { grid-template-columns: 1fr; gap: 28px; }
-  .about-photo { width: 100%; height: auto !important; }
   .illustration .project { grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+}
+
+/* Stack photo above text when there isn't room for them side by side */
+@media (max-width: 1180px) {
+  .about { grid-template-columns: minmax(0, 1fr); gap: 28px; justify-content: stretch; }
+  .about-photo { width: 100%; max-width: 480px; height: auto !important; }
 }
